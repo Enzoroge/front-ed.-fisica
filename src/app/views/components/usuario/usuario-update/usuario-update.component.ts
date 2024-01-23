@@ -41,10 +41,7 @@ export class UsuarioUpdateComponent {
     this.service.update(this.usuario).subscribe((resposta =>{
      this.router.navigate(['usuario'])
     this.message.add({
-      severity:'success',
-      summary:'success',
-      detail:'Usuario atualizado!',
-      life: 3000
+
     })
     }))
   }
