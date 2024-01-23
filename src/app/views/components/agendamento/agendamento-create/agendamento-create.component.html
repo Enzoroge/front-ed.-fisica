@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="labels">
+
+
+  <mat-form-field>
+    <mat-label>Selecione o Usuario</mat-label>
+    <mat-select [(value)]="agendamento.usuario">
+    <mat-option *ngFor="let us of usuario" value="{{us.id}}">{{us.nome}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Selecione a Sala</mat-label>
+    <mat-select [(value)]="agendamento.sala">
+    <mat-option *ngFor="let sl of sala" value= "{{sl.id}}">{{sl.nome}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <!-- <mat-form-field>
+    <mat-label>Data</mat-label>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="agendamento.horaInicio" name="data">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Hora</mat-label>
+    <input matInput type="time" [(ngModel)]="agendamento.hora" name="hora">
+  </mat-form-field> -->
+
+
+  <div fxLayout="row wrap">
+    <div fxFlex="50" fxFill fxLayoutAlign="start center">
+      <mat-form-field>
+        <mat-label>Data</mat-label>
+        <input matInput   type="datetime-local"  [(ngModel)]="agendamento.horaInicio" name="horaInicio" >
+        <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    </div>
+    <div fxFlex="50" fxFill fxLayoutAlign="start center">
+
+
+
+    </div>
+    </div>
+
+
+  <mat-form-field>
+    <mat-label>Data </mat-label>
+    <input matInput type="datetime-local"  [(ngModel)]="agendamento.horaFim" name="horaFim">
+
+    <mat-datepicker-toggle matSuffix [for]="fimPicker"></mat-datepicker-toggle>
+    <mat-datepicker #fimPicker></mat-datepicker>
+  </mat-form-field>
+
+
+</div>
+
+<button class="mat-elevation-z8" (click)="create()"  mat-stroked-button color="accent">Salvar</button>
+<button class="mat-elevation-z8" (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+
+
+
+</div>
+
+
+
+
+

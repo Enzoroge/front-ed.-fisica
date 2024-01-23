@@ -1,0 +1,46 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <mat-nav-list class="nav-list">
+      <a  mat-list-item routerLink="/" >
+        <i class="material-icons">home</i>Home
+      </a>
+      <a  mat-list-item routerLink="agendamento">
+        <i class="material-icons">event_available</i>Agendamento
+      </a>
+      <a mat-list-item routerLink="material">
+        <i class="material-icons">list_alt</i>Materiais
+      </a>
+      <a mat-list-item routerLink="requisicao">
+        <i class="material-icons">shopping_bag</i>Requisição de Material
+      </a>
+      <a mat-list-item routerLink="usuario">
+        <i class="material-icons">group</i>Usuários
+      </a>
+
+      <a mat-list-item routerLink="sala">
+        <i class="material-icons">auto_stories</i>Sala de Aulas
+
+      </a>
+      <a (click)="logout()" mat-list-item routerLink="" >
+        <i class="material-icons">logout</i>Sair
+      </a>
+
+
+
+
+
+
+    </mat-nav-list>
+
+
+  </mat-drawer>
+
+  <div class="sidenav-content" >
+
+      <mat-icon *ngIf="isLoggedIn" mat-icon-button (click)="drawer.toggle()" > more_vert </mat-icon>
+      <router-outlet></router-outlet>
+
+  </div>
+
+</mat-drawer-container>
+

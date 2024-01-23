@@ -1,0 +1,58 @@
+<!--
+
+<form class="form">
+  <h1>Editar Agendamento</h1>
+
+  <mat-form-field class="full-width">
+    <mat-label>Requisicao</mat-label>
+    <input disabled  [(ngModel)]="requisicao.id" name="requisicao.id" maxlength="100"  matInput placeholder="">
+
+
+  </mat-form-field>
+
+
+  <mat-form-field class="full-width">
+    <mat-label>Material</mat-label>
+    <input disabled  [(ngModel)]="requisicao" name="requisicao.nome" maxlength="100"  matInput placeholder="">
+
+
+  </mat-form-field>
+
+
+
+
+  <mat-form-field class="full-width">
+    <mat-label>Quantidade</mat-label>
+
+    <input  [(ngModel)]="requisicao.quantidade" name="requisicao.quantidade" maxlength="100"  matInput placeholder="">
+
+
+  </mat-form-field>
+
+
+
+
+
+  <button (click)="update()" mat-stroked-button color="accent">Editar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+
+
+</form>
+ -->
+ <form class="form">
+  <h1>Atualizar Requisição</h1>
+
+
+  <mat-form-field class="full-width">
+    <mat-label>Material</mat-label>
+    <input [(ngModel)]="requisicao.material.nome" name="materialNome" maxlength="100" matInput placeholder="Nome do Material" disabled>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Quantidade</mat-label>
+    <input [(ngModel)]="requisicao.quantidade" name="requisicaoQuantidade" maxlength="100" matInput placeholder="Quantidade">
+  </mat-form-field>
+
+  <button (click)="update()" mat-stroked-button color="accent">Atualizar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+</form>

@@ -1,0 +1,27 @@
+
+<form class="form">
+  <h1>Atualizar Usuário</h1>
+<mat-form-field class="full-width">
+    <mat-label>Nome</mat-label>
+    <input  [(ngModel)]="usuario.nome"  name="nome" matInput placeholder="">
+
+
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Email</mat-label>
+    <input  [(ngModel)]="usuario.email"  name="e-mail" matInput placeholder="">
+
+  </mat-form-field>
+  <mat-form-field class="full-width">
+    <mat-label>Matricula</mat-label>
+    <input  [(ngModel)]="usuario.matricula"  name="matricula" matInput placeholder="">
+
+  </mat-form-field>
+
+  <button (click)="update()"  mat-stroked-button color="accent">Salvar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+
+
+</form>
+

@@ -1,0 +1,17 @@
+
+<form class="form">
+  <h1>Editar Sala de Aula</h1>
+<mat-form-field class="full-width">
+    <mat-label>Nome</mat-label>
+    <input  [(ngModel)]="sala.nome" required name="nome" maxlength="100" name="nome" matInput placeholder="">
+    <!-- <mat-error *ngIf="nome.invalid">{{  errorValidName() }}</mat-error> -->
+
+  </mat-form-field>
+
+
+
+  <button (click)="update()"  mat-stroked-button color="accent">Atualizar</button>
+  <button (click)="cancel()" mat-stroked-button color="warn">Cancelar</button>
+
+
+</form>

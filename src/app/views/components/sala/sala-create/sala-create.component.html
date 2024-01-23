@@ -1,0 +1,22 @@
+
+
+<form class="form">
+  <h1>Adicionando Nova Sala de Aula</h1>
+<mat-form-field class="full-width">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="sala.nome"  maxlength="100" name="nome" matInput placeholder="">
+    <!-- <mat-error *ngIf="nome.invalid">{{  errorValidName() }}</mat-error> -->
+
+  </mat-form-field>
+
+  <!-- <mat-form-field class="full-width">
+    <mat-label>Quantidade</mat-label>
+    <input [formControl]="quantidade" [(ngModel)]="material.quantidade" required="quantidade" maxlength="3" name="quantidade" matInput placeholder="">
+    <mat-error *ngIf="quantidade.invalid">{{ errorValidQuantidade() }}</mat-error>
+  </mat-form-field()> -->
+
+  <button (click)="create()"  mat-stroked-button color="accent">Salvar</button>
+  <button (click)="cancel()"  mat-stroked-button color="warn">Cancelar</button>
+
+
+</form>
